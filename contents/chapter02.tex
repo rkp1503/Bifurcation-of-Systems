@@ -1,0 +1,91 @@
+\section{Constructing the system}\label{sec:constructing-the-system}
+
+\subsection{Constructing a system that has a Saddle-Node Bifurcation}\label{subsec:constructing-a-system-that-has-a-saddle-node-bifurcation}
+To start creating such a dynamical system, we will start by constructing a system that contains a Saddle-Node Bifurcation. Doing this will satisfy Condition 4. Consider the following system
+\begin{equation*}
+    \begin{dcases}
+        \begin{aligned}
+            \diff[]{x}{t} &= f_1(x,y;\alpha) = \alpha+x^2-y\\
+            \diff[]{y}{t} &= g_1(x,y) = x-y
+        \end{aligned}
+    \end{dcases}
+\end{equation*}
+By inspection, Condition 6 is satisfied. Depending on the value of $\alpha$ in this system, we can have two, one, or zero fixed points given by:
+\begin{equation*}
+    \left(x^*,y^*\right) = \left\{\left(\frac{1-\sqrt{1-4\alpha}}{2}, \frac{1-\sqrt{1-4\alpha}}{2}\right), \left(\frac{1+\sqrt{1-4\alpha}}{2}, \frac{1+\sqrt{1-4\alpha}}{2}\right)\right\}
+\end{equation*}
+Note that if $\alpha<1/4$, then the term in the square root is positive. Thus, we have two distinct fixed points. At $\alpha=1/4$, the term in the square root vanishes, thus implying that there is only one fixed point. For $\alpha>1/4$, the term in the square root is negative. This implies that there are zero real fixed points. With this, we can conclude that this system has a Saddle-Node Bifurcation, satisfying Condition 4. \figref{fig:1} provides a visual representation of the nullclines for different values of $\alpha$.
+
+\subsection{Constructing a system that has a Pitchfork Bifurcation}\label{subsec:constructing-a-system-that-has-a-pitchfork-bifurcation}
+Next we will move onto creating a system that contains a Pitchfork Bifurcation, thus satisfying Condition 3. Consider the following system
+\begin{equation*}
+    \begin{dcases}
+        \begin{aligned}
+            \diff[]{x}{t} &= f_2(x,y;\beta) = x^3-3x^2+(\beta+3)x-\beta-y\\
+            \diff[]{y}{t} &= g_1(x,y) = x-y
+        \end{aligned}
+    \end{dcases}
+\end{equation*}
+By inspection, Condition 6 is satisfied. Depending on the value of $\beta$, we can have three, or one fixed points, which are given by:
+\begin{equation*}
+    \left(x^*,y^*\right) = \left\{\left(1, 1\right), \left(1-\sqrt{1-\beta}, 1-\sqrt{1-\beta}\right), \left(1+\sqrt{1-\beta}, 1+\sqrt{1-\beta}\right)\right\}
+\end{equation*}
+Note that if $\beta<1$, then the term in the square root will be positive implying that we have three distinct roots. If $\beta=1$, then the term in the square root will be zero implying that we have one distinct root. If $\beta>1$, then the term in the square root will be negative implying that we have 1 distinct root. This behavior tells us that we have a Subcritical Pitchfork Bifurcation, thus satisfying Condition 3. \figref{fig:2} provides a visual representation of the nullclines for different values of $\beta$.
+
+\subsection{Constructing a system that has a Hopf Bifurcation}\label{subsec:constructing-a-system-that-has-a-hopf-bifurcation}
+Next, we will move onto creating a system that contains a Hopf Bifurcation in order to satisfy Condition 2. How do we do this? Consider the following arbitrary two-dimensional system:
+\begin{equation*}
+    \begin{dcases}
+        \begin{aligned}
+            \diff[]{x}{t} &= ax+by\\
+            \diff[]{y}{t} &= cx+dy
+        \end{aligned}
+    \end{dcases}
+\end{equation*}
+Its Jacobian Matrix is:
+\begin{equation*}
+    \textbf{J} = \begin{bmatrix}
+        a & b\\
+        c & d
+    \end{bmatrix}
+\end{equation*}
+Since we need a Hopf Bifurcation, we will want to have a center as a fixed point. Having a center as a fixed point implies that $\tau=0$ and $\Delta>0$. Thus, we need to satisfy $a=-d$ and $ad-bc>0$. If we choose $a=1$, then $d=-1$ and $bc<-1$. If we choose $c=1$, then $b<-1$. Lets choose $b=-2$. Then we have:
+\begin{equation*}
+    \begin{dcases}
+        \begin{aligned}
+            \diff[]{x}{t} &= f(x,y) = x-2y\\
+            \diff[]{y}{t} &= g(x,y) = x-y
+        \end{aligned}
+    \end{dcases}
+\end{equation*}
+From here, we will add another parameter that will change the value of $\tau$. Consider the following system:
+\begin{equation*}
+    \begin{dcases}
+        \begin{aligned}
+            \diff[]{x}{t} &= f_3(x,y;\gamma) = (1+\gamma)x-2y\\
+            \diff[]{y}{t} &= g_1(x,y) = x-y
+        \end{aligned}
+    \end{dcases}
+\end{equation*}
+For this particular system, we will have different values of $\gamma$ that can change the type of fixed point. If $\gamma<0$, then we have a stable spiral. If $\gamma=0$, then we have a center. If $\gamma>0$ but $\gamma<1$, then we have an unstable spiral. If $\gamma=1$, then we have a line of fixed points. Finally, for $\gamma>1$, we have a saddle point. \figref{fig:3} provides a visual representation of the system for different values of $\gamma$.
+
+\subsection{Finalizing the system}\label{subsec:finalizing-the-system}
+Now we have three different systems where each one has a particular Bifurcation. To create a system that contains all three of these bifurcations, we will multiply the respective $f$ functions together and the respective $g$ functions together. This gives us:
+\begin{equation*}
+    \begin{dcases}
+    \begin{aligned}
+        \diff[]{x}{t} &= f(x,y;\alpha,\beta,\gamma) = \left(\alpha+x^2-y\right)\left(\beta(x-1)+(x-1)^3-(y-1)\right)\left((1+\gamma)x-2y\right)\\
+        \diff[]{y}{t} &= g(x,y) = x-y
+    \end{aligned}
+    \end{dcases}
+\end{equation*}
+By inspection, Conditions 1, 5, and 6 are satisfied. Since Condition 5 is satisfied, Conditions 2, 3, and 4 are also satisfied based on the previous analysis. To finalize the system, we will divide both $f$ and $g$ by $f_1(0,0)f_2(0,0)$ to prevent any potential problems when computing the Jacobian Matrix of this system. Here, $f_1f_2$ at $(0,0)$ is $-\alpha\beta$, which changes our system to:
+\begin{equation*}
+    \begin{dcases}
+    \begin{aligned}
+        \diff[]{x}{t} &= f(x,y;\alpha,\beta,\gamma) = -\frac{1}{\alpha\beta}\left(\alpha+x^2-y\right)\left(\beta(x-1)+(x-1)^3-(y-1)\right)\left((1+\gamma)x-2y\right)\\
+        \diff[]{y}{t} &= g(x,y) = x-y
+    \end{aligned}
+    \end{dcases}
+\end{equation*}
+Thus, \sysref{eq:1} is a valid two-dimensional system we can analyze that satisfies the six conditions listed above.
