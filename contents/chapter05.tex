@@ -1,0 +1,14 @@
+\section{Hopf Bifurcation analysis}\label{sec:hopf-bifurcation-analysis}
+
+\subsection{Subcritical or Supercritical?}\label{subsec:subcritical-or-supercritical?}
+We know that the system contains a Hopf Bifurcation. We will determine whether it is a Subcritical Hopf Bifurcation or a Supercritical Hopf Bifurcation by generating two phase portraits and comparing them. \figref{fig:9} is a phase portrait of the system before the bifurcation and \figref{fig:10} is a phase portrait of the system just after the bifurcation. For both figures, we will zoom in closer to the fixed point $(0,0)$ and plot a trajectory that goes through the point $(-0.1,-0.1)$. From these figures, we can conclude that the Hopf Bifurcation is a Subcritical Hopf Bifurcation.
+
+\subsection{Parameter analysis}\label{subsec:parameter-analysis}
+Here, we can guess that the Hopf Bifurcation occurs at $\gamma=0$. To verify this, we will take the Jacobian of the System for an arbitrary $\gamma$, evaluated at $(0,0)$:
+\begin{align*}
+    \textbf{J} &= \begin{bmatrix}
+        1+\gamma & -2\\
+        1 & -1
+    \end{bmatrix}
+\end{align*}
+From here, we can determine that the trace of the system is $\tau=\gamma$ which implies that the behavior of the system near $(0,0)$ changes when $\gamma<0$ and when $\gamma>0$. Thus, $\gamma=0$ is where the Hopf Bifurcation occurs.
