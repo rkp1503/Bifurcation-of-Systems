@@ -1,0 +1,24 @@
+\section{Computing the Jacobian Matrix of the system}\label{sec:computing-the-jacobian-matrix-of-the-system}
+The expanded form of $f(x,y;\alpha,\beta,\gamma)$ is:
+\begin{align*}
+    f(x,y;\alpha,\beta,\gamma) &= (\gamma+1)x^6 - 2x^5y - 3(\gamma+1)x^5 + \left(5-\gamma\right)x^4y + \left(\alpha+\beta+3\right)(\gamma+1)x^4 + 2x^3y^2\\
+    &+ 2\left(\gamma-\alpha-\beta-2\right)x^3y - \left(3\alpha+\beta\right)(\gamma+1)x^3 - 4x^2y^2 + \left(6\alpha-(\beta+3)(\gamma+1)\right)x^2y\\
+    &+ \alpha\left(3+\beta\right)(\gamma+1)x^2 + \left(2\beta+\gamma+7\right)xy^2 - \left(2\alpha(\beta+\gamma)+7\alpha-\beta(\gamma+1)\right)xy - \alpha\beta(\gamma+1)x\\
+    &- 2y^3 + 2\left(\alpha-\beta\right)y^2 + 2\alpha\beta y
+\end{align*}
+Its partial derivatives with respect to $x$ and $y$ are:
+\begin{align*}
+    \pdiff[]{f}{x} &= 6(\gamma+1)x^5 - 10x^4y - 15(\gamma+1)x^4 + 4\left(5-\gamma\right)x^3y + 4\left(\alpha+\beta+3\right)(\gamma+1)x^3 + 6x^2y^2\\
+    &+ 6\left(\gamma-\alpha-\beta-2\right)x^2y - 3\left(3\alpha+\beta\right)(\gamma+1)x^2 - 8xy^2 + 2\left(6\alpha-(\beta+3)(\gamma+1)\right)xy + 2\alpha\left(3+\beta\right)(\gamma+1)x\\
+    &+ \left(2\beta+\gamma+7\right)y^2 - \left(2\alpha(\beta+\gamma)+7\alpha-\beta(\gamma+1)\right)y - \alpha\beta(\gamma+1)\\
+    \pdiff[]{f}{y} &= - 2x^5 + \left(5-\gamma\right)x^4 + 4x^3y + 2\left(\gamma-\alpha-\beta-2\right)x^3 - 8x^2y + \left(6\alpha-(\beta+3)(\gamma+1)\right)x^2 + 2\left(2\beta+\gamma+7\right)xy\\
+    &- \left(2\alpha(\beta+\gamma)+7\alpha-\beta(\gamma+1)\right)x - 6y^2 + 4\left(\alpha-\beta\right)y + 2\alpha\beta
+\end{align*}
+So the Jacobian Matrix for this system is:
+\begin{equation}
+    \textbf{J} = \begin{bmatrix}
+        \pdiff[]{f}{x} & \pdiff[]{f}{y}\\
+        1 & -1
+    \end{bmatrix}
+    \label{eq:2}
+\end{equation}
