@@ -14,7 +14,7 @@ By inspection, Condition 6 is satisfied. Depending on the value of $\alpha$ in t
 \begin{equation*}
     \left(x^*,y^*\right) = \left\{\left(\frac{1-\sqrt{1-4\alpha}}{2}, \frac{1-\sqrt{1-4\alpha}}{2}\right), \left(\frac{1+\sqrt{1-4\alpha}}{2}, \frac{1+\sqrt{1-4\alpha}}{2}\right)\right\}
 \end{equation*}
-Note that if $\alpha<1/4$, then the term in the square root is positive. Thus, we have two distinct fixed points. At $\alpha=1/4$, the term in the square root vanishes, thus implying that there is only one fixed point. For $\alpha>1/4$, the term in the square root is negative. This implies that there are zero real fixed points. With this, we can conclude that this system has a Saddle-Node Bifurcation, satisfying Condition 4. \figref{fig:1} provides a visual representation of the nullclines for different values of $\alpha$.
+Note that if $\alpha<1/4$, then the term in the square root is positive. Thus, we have two distinct fixed points. At $\alpha=1/4$, the term in the square root vanishes, thus implying that there is only one fixed point. For $\alpha>1/4$, the term in the square root is negative. This implies that there are zero real fixed points. With this, we can conclude that this system has a Saddle-Node Bifurcation, satisfying Condition 4. \myref[Figure]{fig:1} provides a visual representation of the nullclines for different values of $\alpha$.
 
 \subsection{Constructing a system that has a Pitchfork Bifurcation}\label{subsec:constructing-a-system-that-has-a-pitchfork-bifurcation}
 Next we will move onto creating a system that contains a Pitchfork Bifurcation, thus satisfying Condition 3. Consider the following system
@@ -30,7 +30,7 @@ By inspection, Condition 6 is satisfied. Depending on the value of $\beta$, we c
 \begin{equation*}
     \left(x^*,y^*\right) = \left\{\left(1, 1\right), \left(1-\sqrt{1-\beta}, 1-\sqrt{1-\beta}\right), \left(1+\sqrt{1-\beta}, 1+\sqrt{1-\beta}\right)\right\}
 \end{equation*}
-Note that if $\beta<1$, then the term in the square root will be positive implying that we have three distinct roots. If $\beta=1$, then the term in the square root will be zero implying that we have one distinct root. If $\beta>1$, then the term in the square root will be negative implying that we have 1 distinct root. This behavior tells us that we have a Subcritical Pitchfork Bifurcation, thus satisfying Condition 3. \figref{fig:2} provides a visual representation of the nullclines for different values of $\beta$.
+Note that if $\beta<1$, then the term in the square root will be positive implying that we have three distinct roots. If $\beta=1$, then the term in the square root will be zero implying that we have one distinct root. If $\beta>1$, then the term in the square root will be negative implying that we have 1 distinct root. This behavior tells us that we have a Subcritical Pitchfork Bifurcation, thus satisfying Condition 3. \myref[Figure]{fig:2} provides a visual representation of the nullclines for different values of $\beta$.
 
 \subsection{Constructing a system that has a Hopf Bifurcation}\label{subsec:constructing-a-system-that-has-a-hopf-bifurcation}
 Next, we will move onto creating a system that contains a Hopf Bifurcation in order to satisfy Condition 2. How do we do this? Consider the following arbitrary two-dimensional system:
@@ -67,7 +67,7 @@ From here, we will add another parameter that will change the value of $\tau$. C
         \end{aligned}
     \end{dcases}
 \end{equation*}
-For this particular system, we will have different values of $\gamma$ that can change the type of fixed point. If $\gamma<0$, then we have a stable spiral. If $\gamma=0$, then we have a center. If $\gamma>0$ but $\gamma<1$, then we have an unstable spiral. If $\gamma=1$, then we have a line of fixed points. Finally, for $\gamma>1$, we have a saddle point. \figref{fig:3} provides a visual representation of the system for different values of $\gamma$.
+For this particular system, we will have different values of $\gamma$ that can change the type of fixed point. If $\gamma<0$, then we have a stable spiral. If $\gamma=0$, then we have a center. If $\gamma>0$ but $\gamma<1$, then we have an unstable spiral. If $\gamma=1$, then we have a line of fixed points. Finally, for $\gamma>1$, we have a saddle point. \myref[Figure]{fig:3} provides a visual representation of the system for different values of $\gamma$.
 
 \subsection{Finalizing the system}\label{subsec:finalizing-the-system}
 Now we have three different systems where each one has a particular Bifurcation. To create a system that contains all three of these bifurcations, we will multiply the respective $f$ functions together and the respective $g$ functions together. This gives us:
@@ -88,4 +88,4 @@ By inspection, Conditions 1, 5, and 6 are satisfied. Since Condition 5 is satisf
     \end{aligned}
     \end{dcases}
 \end{equation*}
-Thus, \sysref{eq:1} is a valid two-dimensional system we can analyze that satisfies the six conditions listed above.
+Thus, \myref[System]{eq:1} is a valid two-dimensional system we can analyze that satisfies the six conditions listed above.
